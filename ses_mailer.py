@@ -264,7 +264,7 @@ class Mail(object):
         for ob in optional_blocks:
             if ob in blocks:
                 if ob == "format" and \
-                        mail_params[ob].lower() not in ["html", "text"]:
+                        blocks[ob].lower() not in ["html", "text"]:
                     continue
                 mail_params[ob] = blocks[ob]
         return mail_params
